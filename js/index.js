@@ -12,14 +12,14 @@ function scrollFunction() {
 
 const leftScroll = () => {
   document.getElementById('cardWrapper').scrollBy({
-      left : -300,
+      left : -294,
       behavior : 'smooth'
   })
 }
 
 const rightScroll = () => {
 document.getElementById('cardWrapper').scrollBy({
-  left: 300,
+  left: 294,
   behavior: 'smooth'
 });
 }
