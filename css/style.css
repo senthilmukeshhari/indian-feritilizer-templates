@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    box-shadow: none;
+}
+
+:root{
+    --primary-color :rgb(30, 70, 45);
+    --secondary-color : rgb(70,30,40);
+    --primary-font-color : rgb(245, 245, 245);
+    --secondary-font-color : black;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar{
+    background-color: transparent;
+}
+
+.navbar-head{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand{
+    color: var(--primary-font-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-head > .btn{
+    color: var(--primary-font-color);
+}
+
+.nav-link > i {
+    color: var(--primary-font-color);
+}
+
+.offcanvas{
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+}
+
+
+main{
+    height: 200vh;
+}
+
+
+.carousel-item > img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.card-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card > .card-img-top{
+    object-fit: cover;
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+
+.card-wrapper {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .card-wrapper::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+  }
+  .scroll-button.left {
+    left: 0;
+  }
+  .scroll-button.right {
+    right: 0;
+  }
