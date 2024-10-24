@@ -21,7 +21,7 @@
         <!-- NavBar -->
 
         <nav class="navbar navbar-dark fixed-top">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-head">
                     <a class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                         aria-controls="offcanvasNavbar">
@@ -29,9 +29,28 @@
                     </a>
                     <a class="navbar-brand" href="#"> Fertilizer</a>
                 </div>
-                <ul class="nav justify-content-center">
+                <ul class="d-none d-lg-flex nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">
+                        <a class="nav-link active" href="#" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <ul class="nav justify-content-center">
+                    <li class="d-none d-md-flex search-group">
+                        <i class="fas fa-magnifying-glass text-light search-icon"></i>
+                        <input type="text" name="search" class="search-input" placeholder="Search products...">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#" aria-current="page">
+                            <p class="badge cart-badge rounded-circle">0</p>
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </li>
@@ -53,7 +72,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" href="#" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About</a>
@@ -61,7 +86,7 @@
                         </ul>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">
+                            <button class="btn btn-secondary" type="submit">
                                 Search
                             </button>
                         </form>
@@ -119,33 +144,32 @@
         <!-- End Curoousel -->
         <section class="container-fluid container-lg">
 
-
+            <!-- Card Collection -->
             <div class="mt-4 position-relative">
                 <div class="d-flex justify-content-between align-items-center">
                     <h2>Trend Products</h2>
                     <a href="#" class="">View all <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <button class="d-none d-sm-block scroll-button left btn btn-success rounded-circle" onclick="leftScroll()"><i
-                        class="fas fa-arrow-left"></i></button>
+                <button class="d-none d-sm-block scroll-button left btn btn-success rounded-circle fade-in"
+                    onclick="leftScroll()"><i class="fas fa-arrow-left"></i></button>
                 <div class="card-wrapper" id="cardWrapper">
 
                     <!-- Card -->
-                    <div class="m-1 mb-4 card col-11 col-sm-6 col-md-4 col-lg-4 col-xl-3 shadow">
+                    <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
                         <span class="discount-tag">50% OFF</span>
-
-
-                        <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
-                            height="250" />
+                        <span class="trending-tag badge">Trending</span>
+                        <div class="zoom-hover">
+                            <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
+                                height="200" />
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title">Fertilizer 1</h4>
                             <span class="category badge">category</span>
-                            <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero...</p>
+
                             <span class="discount">50% OFF</span>
-                            <div class="price-details">
-                                <span class="selling-price"> &#8377;&nbsp;4900.99</span>
-                                <span class="mrp">M.R.P: &#8377;&nbsp;7900.99</span>
-                            </div>
+                            <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                            <span class="mrp">&#8377;&nbsp;7900.99</span>
 
                             <div class="ratings">
                                 <span>4.0</span>
@@ -158,48 +182,34 @@
                             </div>
 
 
-                            <div class="d-flex m-2">
-                                <!-- <button class="btn btn-outline-danger rounded-circle">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button> -->
-
-                                <!-- <div class="input-group mx-2">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-minus"></i> </button>
-                                    <input type="number" class="form-control" name="countter" value="0"
-                                        aria-label="counter" aria-describedby="basic-addon1">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-plus"></i> </button>
-                                </div> -->
-
+                            <div class="d-flex my-2">
                                 <button class="btn btn-success w-100">
                                     Add to cart
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
                             <center>
-                                <a href="#" >View more...</a>
+                                <a href="#"">More Details...</a>
                             </center>
                         </div>
                     </div>
                     <!-- End Card -->
+
                     <!-- Card -->
-                    <div class="m-1 mb-4 card col-11 col-sm-6 col-md-4 col-lg-4 col-xl-3 shadow">
+                    <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3 shadow fade-in">
                         <span class="discount-tag">50% OFF</span>
-
-
-                        <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
-                            height="250" />
+                        <div class="zoom-hover">
+                            <img class="card-img-top" src="../products/20240120181436tr-seeds.webp"
+                                alt="Title" height="200" />
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title">Fertilizer 1</h4>
                             <span class="category badge">category</span>
-                            <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero...</p>
                             <span class="discount">50% OFF</span>
-                            <div class="price-details">
-                                <span class="selling-price"> &#8377;&nbsp;4900.99</span>
-                                <span class="mrp">M.R.P: &#8377;&nbsp;7900.99</span>
-                            </div>
-
+                            <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                            <span class="mrp">&#8377;&nbsp;7900.99</span>
                             <div class="ratings">
-                                <span>4.0</span>
+                                <span>4.0&nbsp;</span>
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -207,140 +217,518 @@
                                 <span class="star">&#9734;</span>
                                 <span>(3,165)</span>
                             </div>
-
-
-                            <div class="d-flex m-2">
-                                <!-- <button class="btn btn-outline-danger rounded-circle">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button> -->
-
-                                <!-- <div class="input-group mx-2">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-minus"></i> </button>
-                                    <input type="number" class="form-control" name="countter" value="0"
-                                        aria-label="counter" aria-describedby="basic-addon1">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-plus"></i> </button>
-                                </div> -->
-
+                            <div class="d-flex my-2">
                                 <button class="btn btn-success w-100">
                                     Add to cart
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
                             <center>
-                                <a href="#" >View more...</a>
+                                <a href="#">More Details...</a>
                             </center>
                         </div>
                     </div>
-                    <!-- End Card -->
-                    <!-- Card -->
-                    <div class="m-1 mb-4 card col-11 col-sm-6 col-md-4 col-lg-4 col-xl-3 shadow">
-                        <span class="discount-tag">50% OFF</span>
+                        <!-- End Card -->
 
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <div class="zoom-hover">
 
-                        <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
-                            height="250" />
-                        <div class="card-body">
-                            <h4 class="card-title">Fertilizer 1</h4>
-                            <span class="category badge">category</span>
-                            <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero...</p>
-                            <span class="discount">50% OFF</span>
-                            <div class="price-details">
-                                <span class="selling-price"> &#8377;&nbsp;4900.99</span>
-                                <span class="mrp">M.R.P: &#8377;&nbsp;7900.99</span>
+                                <img class="card-img-top" src="../products/20240120182656tr-fungi.jpg" alt="Title"
+                                    height="200" />
                             </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 1</h4>
+                                <span class="category badge">category</span>
 
-                            <div class="ratings">
-                                <span>4.0</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                                <span>(3,165)</span>
+                                <span class="discount">50% OFF</span>
+                                <div class="">
+                                    <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                    <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                </div>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
+
+
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#">More Details...</a>
+                                </center>
                             </div>
-
-
-                            <div class="d-flex m-2">
-                                <!-- <button class="btn btn-outline-danger rounded-circle">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button> -->
-
-                                <!-- <div class="input-group mx-2">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-minus"></i> </button>
-                                    <input type="number" class="form-control" name="countter" value="0"
-                                        aria-label="counter" aria-describedby="basic-addon1">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-plus"></i> </button>
-                                </div> -->
-
-                                <button class="btn btn-success w-100">
-                                    Add to cart
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                            <center>
-                                <a href="#" >View more...</a>
-                            </center>
                         </div>
-                    </div>
-                    <!-- End Card -->
-                    <!-- Card -->
-                    <div class="m-1 mb-4 card col-11 col-sm-6 col-md-4 col-lg-4 col-xl-3 shadow">
-                        <span class="discount-tag">50% OFF</span>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <img class="card-img-top" src="../products/20240120183051Ekalux-17-removebg-preview.png"
+                                alt="Title" height="200" />
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 1</h4>
+                                <span class="category badge">category</span>
+
+                                <span class="discount">50% OFF</span>
+                                <div class="">
+                                    <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                    <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                </div>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
 
 
-                        <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
-                            height="250" />
-                        <div class="card-body">
-                            <h4 class="card-title">Fertilizer 1</h4>
-                            <span class="category badge">category</span>
-                            <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero...</p>
-                            <span class="discount">50% OFF</span>
-                            <div class="price-details">
-                                <span class="selling-price"> &#8377;&nbsp;4900.99</span>
-                                <span class="mrp">M.R.P: &#8377;&nbsp;7900.99</span>
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#">More Details...</a>
+                                </center>
                             </div>
-
-                            <div class="ratings">
-                                <span>4.0</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                                <span>(3,165)</span>
-                            </div>
-
-
-                            <div class="d-flex m-2">
-                                <!-- <button class="btn btn-outline-danger rounded-circle">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button> -->
-
-                                <!-- <div class="input-group mx-2">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-minus"></i> </button>
-                                    <input type="number" class="form-control" name="countter" value="0"
-                                        aria-label="counter" aria-describedby="basic-addon1">
-                                    <button class="btn btn-outline-secondary"> <i class="fas fa-plus"></i> </button>
-                                </div> -->
-
-                                <button class="btn btn-success w-100">
-                                    Add to cart
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                            <center>
-                                <a href="#" >View more...</a>
-                            </center>
                         </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <img class="card-img-top" src="../products/20240120183451Glycel_3-removebg-preview.png"
+                                alt="Title" height="200" />
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 1</h4>
+                                <span class="category badge">category</span>
+
+                                <span class="discount">50% OFF</span>
+                                <div class="">
+                                    <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                    <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                </div>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
+
+
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#">More Details...</a>
+                                </center>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <img class="card-img-top"
+                                src="../products/20240120183802Biovita_3-PhotoRoom.png-PhotoRoom.png" alt="Title"
+                                height="200" />
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 1</h4>
+                                <span class="category badge">category</span>
+
+                                <span class="discount">50% OFF</span>
+                                <div class="">
+                                    <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                    <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                </div>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
+
+
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#">More Details...</a>
+                                </center>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <img class="card-img-top" src="../products/20240120185118Rasi-cotton.jpeg" alt="Title"
+                                height="200" />
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 6</h4>
+                                <span class="category badge">category</span>
+
+                                <span class="discount">50% OFF</span>
+                                <div class="">
+                                    <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                    <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                </div>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
+
+
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#">More Details...</a>
+                                </center>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
                     </div>
-                    <!-- End Card -->
-
-
-                    <!-- Add more cards as needed -->
+                    <button class="d-none d-sm-block scroll-button right btn btn-success rounded-circle fade-in"
+                        onclick="rightScroll()"><i class="fas fa-arrow-right"></i></button>
                 </div>
-                <button class="d-none d-sm-block scroll-button right btn btn-success rounded-circle" onclick="rightScroll()"><i
-                        class="fas fa-arrow-right"></i></button>
+                <!-- End Card Collection -->
+                <!-- Card Collection -->
+                <div class="mt-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2>Most Viewed Products</h2>
+                        <a href="#" class="">View all <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <button class="d-none d-sm-block scroll-button left btn btn-success rounded-circle"
+                        onclick="leftScroll()"><i class="fas fa-arrow-left"></i></button>
+                    <div class="card-wrapper" id="cardWrapper">
+
+                        <!-- Card -->
+                        <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                            <span class="discount-tag">50% OFF</span>
+                            <span class="trending-tag badge">Trending</span>
+                            <div class="zoom-hover">
+                                <img class="card-img-top" src="../products/20240120181124tr-hdpebag.jpg" alt="Title"
+                                    height="200" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Fertilizer 1</h4>
+                                <span class="category badge">category</span>
+
+                                <span class="discount">50% OFF</span>
+                                <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                <span class="mrp">&#8377;&nbsp;7900.99</span>
+
+                                <div class="ratings">
+                                    <span>4.0</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span>(3,165)</span>
+                                </div>
+
+
+                                <div class="d-flex my-2">
+                                    <button class="btn btn-success w-100">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <center>
+                                    <a href="#"">More Details...</a>
+                </center>
             </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class=" m-1 mb-4 card col-11 col-sm-4 col-md-3 shadow fade-in">
+                                        <span class="discount-tag">50% OFF</span>
+                                        <div class="zoom-hover">
+                                            <img class="card-img-top" src="../products/20240120181436tr-seeds.webp"
+                                                alt="Title" height="200" />
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fertilizer 1</h4>
+                                            <span class="category badge">category</span>
+
+                                            <span class="discount">50% OFF</span>
+                                            <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                            <span class="mrp">&#8377;&nbsp;7900.99</span>
+
+                                            <div class="ratings">
+                                                <span>4.0</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9734;</span>
+                                                <span>(3,165)</span>
+                                            </div>
+                                            <div class="d-flex my-2">
+                                                <button class="btn btn-success w-100">
+                                                    Add to cart
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </button>
+                                            </div>
+                                            <center>
+                                                <a href="#">More Details...</a>
+                                            </center>
+                                        </div>
+                            </div>
+                            <!-- End Card -->
+
+                            <!-- Card -->
+                            <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                                <span class="discount-tag">50% OFF</span>
+                                <div class="zoom-hover">
+
+                                    <img class="card-img-top" src="../products/20240120182656tr-fungi.jpg" alt="Title"
+                                        height="200" />
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Fertilizer 1</h4>
+                                    <span class="category badge">category</span>
+
+                                    <span class="discount">50% OFF</span>
+                                    <div class="">
+                                        <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                        <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                    </div>
+
+                                    <div class="ratings">
+                                        <span>4.0</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9734;</span>
+                                        <span>(3,165)</span>
+                                    </div>
+
+
+                                    <div class="d-flex my-2">
+                                        <button class="btn btn-success w-100">
+                                            Add to cart
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <center>
+                                        <a href="#">More Details...</a>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                            <!-- Card -->
+                            <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                                <span class="discount-tag">50% OFF</span>
+                                <img class="card-img-top" src="../products/20240120183051Ekalux-17-removebg-preview.png"
+                                    alt="Title" height="200" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Fertilizer 1</h4>
+                                    <span class="category badge">category</span>
+
+                                    <span class="discount">50% OFF</span>
+                                    <div class="">
+                                        <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                        <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                    </div>
+
+                                    <div class="ratings">
+                                        <span>4.0</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9734;</span>
+                                        <span>(3,165)</span>
+                                    </div>
+
+
+                                    <div class="d-flex my-2">
+                                        <button class="btn btn-success w-100">
+                                            Add to cart
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <center>
+                                        <a href="#">More Details...</a>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                            <!-- Card -->
+                            <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                                <span class="discount-tag">50% OFF</span>
+                                <img class="card-img-top" src="../products/20240120183451Glycel_3-removebg-preview.png"
+                                    alt="Title" height="200" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Fertilizer 1</h4>
+                                    <span class="category badge">category</span>
+
+                                    <span class="discount">50% OFF</span>
+                                    <div class="">
+                                        <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                        <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                    </div>
+
+                                    <div class="ratings">
+                                        <span>4.0</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9734;</span>
+                                        <span>(3,165)</span>
+                                    </div>
+
+
+                                    <div class="d-flex my-2">
+                                        <button class="btn btn-success w-100">
+                                            Add to cart
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <center>
+                                        <a href="#">More Details...</a>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                            <!-- Card -->
+                            <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                                <span class="discount-tag">50% OFF</span>
+                                <img class="card-img-top"
+                                    src="../products/20240120183802Biovita_3-PhotoRoom.png-PhotoRoom.png" alt="Title"
+                                    height="200" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Fertilizer 1</h4>
+                                    <span class="category badge">category</span>
+
+                                    <span class="discount">50% OFF</span>
+                                    <div class="">
+                                        <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                        <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                    </div>
+
+                                    <div class="ratings">
+                                        <span>4.0</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9734;</span>
+                                        <span>(3,165)</span>
+                                    </div>
+
+
+                                    <div class="d-flex my-2">
+                                        <button class="btn btn-success w-100">
+                                            Add to cart
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <center>
+                                        <a href="#">More Details...</a>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                            <!-- Card -->
+                            <div class="m-1 mb-4 card col-11 col-sm-4 col-md-3  shadow fade-in">
+                                <span class="discount-tag">50% OFF</span>
+                                <img class="card-img-top" src="../products/20240120185118Rasi-cotton.jpeg" alt="Title"
+                                    height="200" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Fertilizer 6</h4>
+                                    <span class="category badge">category</span>
+
+                                    <span class="discount">50% OFF</span>
+                                    <div class="">
+                                        <span class="selling-price"> &#8377;&nbsp;4900.99</span>
+                                        <span class="mrp">&#8377;&nbsp;7900.99</span>
+                                    </div>
+
+                                    <div class="ratings">
+                                        <span>4.0</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9734;</span>
+                                        <span>(3,165)</span>
+                                    </div>
+
+
+                                    <div class="d-flex my-2">
+                                        <button class="btn btn-success w-100">
+                                            Add to cart
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <center>
+                                        <a href="#">More Details...</a>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                        </div>
+                        <button class="d-none d-sm-block scroll-button right btn btn-success rounded-circle"
+                            onclick="rightScroll()"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <!-- End Card Collection -->
+
+
+
         </section>
 
 

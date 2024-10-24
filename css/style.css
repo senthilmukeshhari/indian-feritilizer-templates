@@ -1,168 +1,245 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+main {
+  height: 300vh;
 }
 
-*:focus{
-    box-shadow: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary-color :rgb(23, 219, 98);
-    --secondary-color : #ff4c4c;
-    --primary-font-color : rgb(245, 245, 245);
-    --secondary-font-color : black;
+*:focus {
+  box-shadow: none;
 }
 
-::-webkit-scrollbar{
-    display: none;
+:root {
+  --bg-color: rgb(210, 255, 227);
+  --primary-color: rgb(21, 144, 68);
+  --secondary-color: #ff4c4c;
+  --primary-font-color: whitesmoke;
+  --secondary-font-color: #888;
 }
 
-.navbar{
-    background-color: transparent;
+body {
+  background-color: var(--bg-color);
 }
 
-.navbar-head{
-    display: flex;
-    align-items: center;
+::-webkit-scrollbar {
+  display: none;
 }
 
-.navbar-brand{
-    color: var(--primary-font-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
+.navbar {
+  background-color: transparent;
 }
 
-.navbar-head > .btn{
-    color: var(--primary-font-color);
+.navbar-head {
+  display: flex;
+  align-items: center;
 }
 
-.nav-link > i {
-    color: var(--primary-font-color);
+.navbar-brand {
+  color: var(--primary-font-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
-.offcanvas{
-    background-color: var(--primary-color);
-    color: var(--primary-font-color);
+.navbar-head > .btn {
+  color: var(--primary-font-color);
 }
 
-
-main{
-    height: 200vh;
+.nav-link > i,
+.nav-link,
+.nav-link:hover {
+  color: var(--primary-font-color);
 }
 
+.search-group{
+  position: relative;
+}
+
+.search-icon{
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+
+.search-input {
+  border: 2px solid var(--primary-font-color);
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 34px;
+  height: 40px;
+  outline: none;
+  background-color: transparent;
+  color: var(--primary-font-color);
+}
+
+.search-input::placeholder{
+  color: var(--primary-font-color);
+  text-transform: capitalize;
+}
+
+.cart-badge{
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* .active{
+  font-weight: bold;
+} */
+
+.offcanvas {
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+}
 
 .carousel-item > img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.card-section{
-    display: flex;
-    justify-content: space-between;
+.card {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card > .card-img-top{
-    object-fit: cover;
+.card-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.zoom-hover {
+  overflow: hidden;
+}
+
+.zoom-hover:hover img {
+  transform: scale(1.2);
+}
+
+.card-img-top {
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-body > center > a {
+  color: var(--secondary-font-color);
 }
 
 /* For Chrome, Safari, Edge, and Opera */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-
+  -webkit-appearance: none;
 }
 
 /* For Firefox */
 input[type="number"] {
-    -moz-appearance: textfield;
-    text-align: center;
+  -moz-appearance: textfield;
+  text-align: center;
 }
 
-
 .card-wrapper {
-    display: flex;
-    overflow-x: auto;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-  .card-wrapper::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-  }
-  .scroll-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  .scroll-button.left {
-    left: 0;
-  }
-  .scroll-button.right {
-    right: 0;
-  }
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.card-wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.scroll-button.left {
+  left: 0px;
+}
+.scroll-button.right {
+  right: 0;
+}
 
-  .discount-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 5px;
-  }
+.discount-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 5;
+}
 
-  .card{
-    position:relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+.trending-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 5;
+}
 
-  }
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.category {
+  background-color: #888;
+  text-transform: capitalize;
+}
 
-  .category{
-    background-color: #888;
-    text-transform: capitalize;
-  }
+.btn-success,
+.btn-success:hover {
+  background-color: var(--primary-color);
+  border: none;
+}
 
-  .btn-success, .btn-success:hover{
-    background-color: var(--primary-color);
-    border: none;
-  }
-  
-  .price-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2px 0;
-  }
-  
-  .mrp {
-    text-decoration: line-through;
-    color: #888;
-  }
-  .selling-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .discount {
-    color: var(--primary-color);
-  }
-  .ratings {
-    display: flex;
-    align-items: center;
-  }
-  .star {
-    font-size: larger;
-    color: var(--primary-color);
-    margin-right: 2px;
-  }
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.mrp {
+  text-decoration: line-through;
+  color: #888;
+}
+.selling-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.discount {
+  color: var(--primary-color);
+}
+.ratings {
+  display: flex;
+  align-items: center;
+}
+.star {
+  font-size: larger;
+  color: var(--primary-color);
+  margin-right: 2px;
+}
+
+/* Fade animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
