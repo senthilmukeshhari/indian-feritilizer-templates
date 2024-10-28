@@ -129,13 +129,6 @@ body {
   font-family: tamilKuralFont;
 }
 
-@media(max-width:576px) {
-  .thirukural{
-    font-size: 0.95rem;
-    word-spacing: 0;
-  }
-}
-
 .fs{
   font-size: 1rem;
 }
@@ -400,41 +393,22 @@ input[type="number"] {
   filter: drop-shadow(15px 15px 15px #25252d)
 }
 
-.login-now-box{
-  overflow: hidden;
-  position: relative;
+.btn-theme {
+  background-color: var(--primary-color); /* Theme color */
+  color: white;
+  border: none;
 }
 
-.login-now-box .overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background:linear-gradient(to right, transparent, rgb(26 26 26) 40%);
-}
-
-.login-now-box .right{
-  width: 60%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--primary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-now-box .right button{
-  color: var(--primary-color);
+.card-title {
+  font-size: 1.5em;
   font-weight: bold;
-  background-color: var(--bg-color);
-  padding: 10px 30px;
 }
 
-.login-now-box img{
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transform: translatex(-50px);
+.card-text {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+ul {
+  font-size: 0.9em;
 }
