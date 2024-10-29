@@ -10,15 +10,15 @@ function scrollFunction() {
   }
 }
 
-const leftScroll = () => {
-  document.getElementById('cardWrapper').scrollBy({
+const leftScroll = (id) => {
+  document.getElementById(id).scrollBy({
       left : -294,
       behavior : 'smooth'
   })
 }
 
-const rightScroll = () => {
-document.getElementById('cardWrapper').scrollBy({
+const rightScroll = (id) => {
+document.getElementById(id).scrollBy({
   left: 294,
   behavior: 'smooth'
 });
