@@ -10,7 +10,7 @@
 
 :root {
   --bg-color: #e5e5e5;
-  --primary-color: #159044;
+  --primary-color: #0f622f;
   --secondary-color: #ff4c4c;
   --primary-font-color: whitesmoke;
   --secondary-font-color: #888;
@@ -38,7 +38,7 @@ body {
 
 .navbar-head {
   display: flex;
-  align-items: start;
+  align-items: ce;
 }
 
 .navbar-head > .btn {
